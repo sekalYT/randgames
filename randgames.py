@@ -18,7 +18,8 @@ def EN():
 	print("1 - Dice")
 	print("2 - Slots")
 	print("3 - Random number")
-	print("4 - Select language")
+	print("4 - Coinflip")
+	print("5 - Select language")
 	choiceen = input()
 	if choiceen == "1":
 		diceen()
@@ -27,6 +28,8 @@ def EN():
 	if choiceen == "3":
 		randomnumberen()
 	if choiceen == "4":
+		 coinflipen()
+	if choiceen == "5":
 		selectlanguage()
 
 def diceen():
@@ -80,7 +83,8 @@ def RU():
 	print("1 - Бросить кубик")
 	print("2 - Слоты")
 	print("3 - Случайное число")
-	print("4 - Изменить язык")
+	print("4 - Бросить монетку")
+	print("5 - Изменить язык")
 	choiceru = input()
 	if choiceru == "1":
 		diceru()
@@ -89,6 +93,8 @@ def RU():
 	if choiceru == "3":
 		randomnumberru()
 	if choiceru == "4":
+		coinflipru()
+	if choiceru == "5":
 		selectlanguage()
 
 
@@ -136,5 +142,21 @@ def randomnumberru():
 		randomnumberru()
 	if choicerunumber1 == "2":
 		RU()
+	
+def coinflipru():
+	possible_actions = ["Орёл", "Решка"]
+	coinflipp = random.choice(possible_actions)
+	print("********************")
+	print(f"{coinflipp}")
+	print("********************")
+	RU()
+
+def coinflipen():
+	possible_actions = ["Eagle", "Tails"]
+	coinflip1 = random.choice(possible_actions)
+	print("********************")
+	print(f"{coinflip1}")
+	print("********************")
+	EN()
 	
 selectlanguage()
